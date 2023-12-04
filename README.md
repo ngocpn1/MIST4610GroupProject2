@@ -88,5 +88,10 @@ When applying this calculated field to our models, we filtered out "N/A", "OTHER
 
 ## Analysis & Results
 ![Screenshot 2023-12-04 at 5 39 21 PM](https://github.com/NickKalenik/MIST4610GroupProject2/assets/148160069/c37d04ec-745a-4bec-8f86-d08226635640)
+The most obvious result of this analysis is that the frequency of non-constant speed car crashes is always higher than the frequency of constant speed crashes. This result makes sense, as it is much more likely for a car to be turning, accelerating, or decelerating as opposed to driving at a constant speed when in an accident. 
+
+The only correlation we see between injury severity and car movement is that "Possible Injury" is generally slightly higher in car accidents with non-constant speeds. 
+
+Finally, the visualization shows us that car accidents tend to occur more in the winter months of the year. This makes sense in Maryland, as driving conditions are most likely more dangerous in the winter, leading to more accidents.
 
 ![Screenshot 2023-12-04 at 5 46 30 PM](https://github.com/NickKalenik/MIST4610GroupProject2/assets/148160069/beccc3e6-9040-4bdb-9ee7-a155a073b8a1)
