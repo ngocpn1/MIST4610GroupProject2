@@ -15,11 +15,11 @@ We have created two models from the data we obtained from https://catalog.data.g
 The second model is a geographical representation of every crash within the dataset. It shows crash hotspots and could be used to find intersections or portions of roads that have an above average crash rate. The data is further filtered by separating each crash based upon whether or not the driver was in some state of impairment. 
 
 ## Our Two Questions Explained
-How do the frequency and severity of car crashes vary over different months in Maryland, and are there specific patterns associated with levels of injury severity to drivers when the cars are “moving at a constant speed” vs when they are not “moving at a constant speed”?
+1. How do the frequency and severity of car crashes vary over different months in Maryland, and are there specific patterns associated with levels of injury severity to drivers when the cars are “moving at a constant speed” vs when they are not “moving at a constant speed”?
 
 We chose this question because it highlights an important difference in the data. Cars that are moving at a constant speed should be safer than a car constantly changing speeds, and this should affect the data. In addition, the visualization will show if the time of year impacts the frequency and severity of car crashes in Maryland.
 
-What are the geographic hotspots for car crashes in Maryland, and how do these locations of crashes correlate with the driver of the vehicles being impaired or under the influence vs not being impaired?
+2. What are the geographic hotspots for car crashes in Maryland, and how do these locations of crashes correlate with the driver of the vehicles being impaired or under the influence vs not being impaired?
 
 We chose this question because if there are geographical hotspots for car crashes, then maybe something can be changed about the intersection/etc to fix the issue. We also chose to incorporate data whether the individual was impaired at the time of the accident. This could highlight specific hotspots that may be close to local bars.## Our Two Questions Explained
 ## Data Set Manipulations
