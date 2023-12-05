@@ -100,7 +100,7 @@ In our second data visualization, the most noticible trend is that car crashes a
 
 A second observation that can be made from this data is that there is a relatively high number of accidents caused by driver impairment when compared to preexisting notions. While  there are more non-impaired driver accidents, there is a very noticeable and measurable amount of impaired driver accidents among the data.
 
-While this is a high overview of the entire data map, a closer observation allows for crash data visualization along specific roads, which can be seen on some parts of the map already. It is evident that impaired driver accidents concentrate closer to the city, and taper off along roads that lead further away. This may be due to the fact that many more bars, restaurants, and alcohol serving locations are located closer to D.C. as opposed to further away.
+While this is a high overview of the entire data map, a closer observation allows for crash data visualization along specific roads, which can be seen on some parts of the map already. It is evident that impaired driver accidents concentrate closer to the city, and taper off along roads that lead further away. This is likely due to the fact that many more bars, restaurants, and alcohol serving locations are located closer to D.C. as opposed to further away.
 
 # Honors Option Third Question
 3. What manufacturing years of cars are most frequently involved in accidents and tend to sustain the highest level of damage?
