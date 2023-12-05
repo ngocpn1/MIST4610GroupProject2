@@ -96,11 +96,16 @@ The only correlation we see between injury severity and car movement is that "Po
 Finally, the visualization shows us that car accidents tend to occur more in the winter months of the year. This makes sense in Maryland, as driving conditions are most likely more dangerous in the winter, leading to more accidents.
 
 ![Screenshot 2023-12-04 at 5 46 30 PM](https://github.com/NickKalenik/MIST4610GroupProject2/assets/148160069/beccc3e6-9040-4bdb-9ee7-a155a073b8a1)
-In our second data visualization, the most noticible trend is that car crashes are much more frequent in areas closer to D.C., which makes sense as many more cars would be driving in this area as opposed to further outside of the city.
+In our second data visualization, the most noticible trend is that car crashes are much more frequent in areas closer to D.C., which makes sense as many more cars would be driving in this area as opposed to further outside of the city. It is evident that impaired driver accidents concentrate closer to D.C., and taper off along roads that lead further away. This is likely due to the fact that many more bars, restaurants, and alcohol serving locations are located closer to D.C. as opposed to further away. While this is a high overview, a closer view allows for distinction of crashes along individual roads.
 
-A second observation that can be made from this data is that there is a relatively high number of accidents caused by driver impairment when compared to preexisting notions. While  there are more non-impaired driver accidents, there is a very noticeable and measurable amount of impaired driver accidents among the data.
+<img width="1206" alt="Screenshot 2023-12-05 at 11 08 34 AM" src="https://github.com/anthonyramage/MIST4610GroupProject2/assets/141188901/272896d5-badf-4055-b991-5e09b693b115">
 
-While this is a high overview of the entire data map, a closer observation allows for crash data visualization along specific roads, which can be seen on some parts of the map already. It is evident that impaired driver accidents concentrate closer to the city, and taper off along roads that lead further away. This is likely due to the fact that many more bars, restaurants, and alcohol serving locations are located closer to D.C. as opposed to further away.
+A bar graph of the count of accidents within each category helps us to visualize that while the number of impaired driver accidents may seem high when looking at the overview map, they account for a relatively low number of accidents when compared to those of unimpaired drivers.
+
+<img width="1399" alt="Screenshot 2023-12-05 at 11 07 58 AM" src="https://github.com/anthonyramage/MIST4610GroupProject2/assets/141188901/8f889f0d-d2f0-4663-9e73-70e863033ef9">
+As stated previously, a more zoomed in observation of this data map allows for crash data visualization along specific roads. In this particular section of the map, it is clear to see that accidents are happening with the greatest frequency on what appears to be main roads, which concentrate around a particular center of activity. This visualization lends to a city center with a highway loop around the outside. Crashes are interspersed along side roads and throughout the loop, but this visualization allows for high traffic areas to be identified. Further, it can be seen that impaired accidents occur along these hihg traffic roads and in the center of activity at a higher rate than they occur when off of these clearly identificable roads.
+
+
 
 # Honors Option Third Question
 3. What manufacturing years of cars are most frequently involved in accidents and tend to sustain the highest level of damage?
