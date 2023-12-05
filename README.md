@@ -10,9 +10,12 @@ Identifying a data set and answering two interesting questions about the data th
 5. Anthony Ramage [@anthonyramage](https://github.com/anthonyramage)
 6. CJ Tumlin [@CJTumlin](https://github.com/CJTumlin)
 ## Dataset Description
-We have created two models from the data we obtained from https://catalog.data.gov/dataset. The data includes information about car crashes in the state of Maryland. The first model shows the total count of crashes for each month of the year. The two bar charts in each month section represent constant speed crashes vs non-constant speed crashes. Each bar is colored to represent the three different injury levels of each crash - no apparent injury, possible injury, and suspected minor injury.
+The dataset reports the details of crashes within Montgomery County of Maryland and was obtained from https://catalog.data.gov/dataset/crash-reporting-drivers-data. The dimensions of the dataset contain 43 columns and 170218 rows. The data is separated into different main categories - report information: report number, local case number, ACRS report type, and agency name; when and whereabouts of the crash: crash date/time, municipality, latitude, longitude, location, route type, road name, cross-street type, cross-street name, off-road description; involved parties: related non-motorist, person ID, driver at fault, driver substance abuse, non-motorist substance abuse, and injury severity, drivers license state, driver distracted by; collision details: collision type, vehicle damage extent, vehicle first impact locations, vehicle second impact location, vehicle body type, vehicle movement, vehicle continuing dir, and vehicle going dir; vehicle information: vehicle ID, vehicle year, vehicle make, vehicle model, equipment problems; environmental conditions: weather, surface condition, light, traffic control, speed limit; and special circumstances: circumstance, driverless vehicle, and parked vehicle.
 
-The second model is a geographical representation of every crash within the dataset. It shows crash hotspots and could be used to find intersections or portions of roads that have an above average crash rate. The data is further filtered by separating each crash based upon whether or not the driver was in some state of impairment. 
+Almost all of the columns have string data types except for local case number (whole number), crash date/time (Date/Time), speed limit (whole number), vehicle year (whole number), and longitude & latitude (decimal number).
+
+This dataset provided an abundance of information and allowed us to thoroughly build detailed visualizations.
+
 
 ## Our Two Questions Explained
 1. How do the frequency and severity of car crashes vary over different months in Maryland, and are there specific patterns associated with levels of injury severity to drivers when the cars are “moving at a constant speed” vs when they are not “moving at a constant speed”?
@@ -107,81 +110,6 @@ As stated previously, a more zoomed in observation of this data map allows for c
 
 
 
-# Honors Option Third Question
-3. What manufacturing years of cars are most frequently involved in accidents and tend to sustain the highest level of damage?
-
-I chose this question to model because I wanted to look at the damage sustained by the different manufacutring years of cars in an attempt to see if there were any noticeable trends that arose around these different years of cars. This visualization could help to determine if any particular year of manufacturing showed poor safety and quality, or if a particular year resulted in less damages due to a new regulation or safety standard. I also wanted to view the body types of cars involved in accidents those years, in order to determine if an increase in a particular body type may have an impact on whether or not the overall damages of cars made in that year increased.
-
-## Data Set Manipulation and Filters
-In order to accomplish the first part of this data visualization, the combined bar and line chart, I first filtered the Vehicle Manufacturing Year by a range of dates from 1995 to 2019. I found that not enough data was available on either side of this range to provide enough evidence for determining trends in damage extent.
-I then filtered the data based Vehicle Damage Extent. I only used crashes that had reported some form of damages, and removed crashes with N/A, OTHER, or UNKOWN damages incurred.
-
-To accomplish the second part of this data visualization, a bar chart of when the crashes occurred, I used the same two filters as above.
-
-For the third part of this visaulization, the pie chart of vehicle body types, I used the same filters as above, with a slider based filter on the Vehicle Year, as well as a new calculated field. In order to summarize all Vehicle Body Types into a a few similar categories, I had to use a calculated field to aggregate them based on similarities. I grouped all vehicles into 6 Groups, PASSENGER CAR, TRUCK, EMERGENCY VEHICLE, MOTORCYCLE, BUS, and OTHER. I used this code to do that.
-
-IF \
-   [Vehicle Body Type] = "ALL TERRAIN VEHICLE" OR \
-   [Vehicle Body Type] = "AUTOCYCLE" OR \
-   [Vehicle Body Type] = "FARM VEHICLE" OR \
-   [Vehicle Body Type] = "LOW SPEED VEHICLE" OR \
-   [Vehicle Body Type] = "N/A" OR \
-   [Vehicle Body Type] = "OTHER" OR \
-   [Vehicle Body Type] = "RECREATIONAL VEHICLE" OR \
-   [Vehicle Body Type] = "SNOWMOBILE" OR \
-   [Vehicle Body Type] = "UNKNOWN" \
-THEN "OTHER" \
-ELSEIF \
-   [Vehicle Body Type] = "AMBULANCE/EMERGENCY" OR \
-   [Vehicle Body Type] = "AMBULANCE/NON EMERGENCY" OR \
-   [Vehicle Body Type] = "FIRE VEHICLE/EMERGENCY" OR \
-   [Vehicle Body Type] = "FIRE VEHICLE/NON EMERGENCY" OR \
-   [Vehicle Body Type] = "POLICE VEHICLE/EMERGENCY" OR \
-   [Vehicle Body Type] = "POLICE VEHICLE/NON EMERGENCY" \
-THEN "EMERGENCY VEHICLE" \
-ELSEIF \
-   [Vehicle Body Type] = "CARGO VAN/LIGHT TRUCK 2 AXLES (OVER 10,000LBS (4,536 KG))" OR \
-   [Vehicle Body Type] = "MEDIUM/HEAVY TRUCKS 3 AXLES (OVER 10,000LBS (4,536 KG))" OR \
-   [Vehicle Body Type] = "OTHER LIGHT TRUCKS (OVER 10,000LBS (4,536 KG))" OR \
-   [Vehicle Body Type] = "PICKUP TRUCK" OR \
-   [Vehicle Body Type] = "TRUCK TRACTOR" \
-THEN "TRUCK" \
-ELSEIF \
-   [Vehicle Body Type] = "CROSS COUNTRY BUS" OR \
-   [Vehicle Body Type] = "SCHOOL BUS" OR \
-   [Vehicle Body Type] = "OTHER BUS" OR \
-   [Vehicle Body Type] = "TRANSIT BUS" \
-THEN "BUS" \
-ELSEIF \
-   [Vehicle Body Type] = "PASSENGER CAR" OR \
-   [Vehicle Body Type] = "LIMOUSINE" OR \
-   [Vehicle Body Type] = "STATION WAGON" OR \
-   [Vehicle Body Type] = "VAN" OR \
-   [Vehicle Body Type] = "SPORT UTILITY VEHICLE (SUV)" \
-THEN "PASSENGER CAR" \
-ELSEIF \
-   [Vehicle Body Type] = "MOTORCYCLE" OR \
-   [Vehicle Body Type] = "MOPED" \
-THEN "MOTORCYCLE" \
-ELSE "OTHER" \
-END 
-
-## Analysis and Results
-<img width="1406" alt="Screenshot 2023-12-04 at 10 06 53 PM" src="https://github.com/anthonyramage/MIST4610GroupProject2/assets/141188901/b0e6ab28-7263-4908-903a-bc1e5ceee409">
-
-<img width="1312" alt="Screenshot 2023-12-04 at 10 04 22 PM" src="https://github.com/anthonyramage/MIST4610GroupProject2/assets/141188901/30054d8f-32c3-448e-9cbd-bc74b6c2585e">
-
-<img width="1247" alt="Screenshot 2023-12-04 at 10 04 45 PM" src="https://github.com/anthonyramage/MIST4610GroupProject2/assets/141188901/71b787ac-7c7b-48e5-80c8-bb0869b41b6e">
-
-<img width="1409" alt="Screenshot 2023-12-04 at 10 05 04 PM" src="https://github.com/anthonyramage/MIST4610GroupProject2/assets/141188901/2f164fc9-3f0d-40e7-a996-9b6de59e95c9">
-
-To create this analysis, a dashboard was created to combine these different data visualizations into one comprehensive view. Each individual sheet is also included for the purpose of a closer look at each model.
-
-The first trend that is noticeable is that the majority of accidents occur on vehicles that were made in 2015. When looking at the bar graph labeled "Crashes Per Year", 11,723 accidents took place in 2016. This data helps to support the high number of crashes observed for 2015 cars, since the majority of car crashes that are recorded took place in 2016, one year after cars manufactured in 2015 would have been released. 
-
-One factore that can be observed to help explain the level of damages recorded in each year is the pie chart labeled "Pie Chart of Vehicle Body Type and Vehicle Year Involved In Crash". When looking at the makeup of 2015 cars involved in accidents, a large majority of these cars are PASSENGER CARS body type. If the pie chart is filtered either a year up or down, it can be seen that the percent of PASSENGER CARS decreases, as well as the number of DISABLING damages recorded decreases on the chart labeled "Count of Crashes Per Year and Vehicle Damage Extent". An analysis that could be made is that a higher rate of PASSENGER CARS involved in accidents may lead to a higher amount of damages sustained by these cars. A possible explanation is that PASSENEGER CARS are smaller and more fragile than things like a BUS or TRUCK, and therefore may sustain more damages than other vehicle types when involved in accidents. This analysis can be applied to each manufacturing year of car. 
-
-2015 cars are involved in the most accidents and sustain the most damages, while also having one of the relatively lowest number of cars without damages. One possible assumption that can be made from this, and later explored, is that 2015 cars may have been built before newer safety regulations and standards were introduced. The overarching trend is that cars built after 2015 are involved in less crashes, and tend to sustain less damages as well. While this may be due to the fact these cars have been on the road less, some of the variability may be explained by increased safety regulations and quality standards implemented throughout time. Now that this data trend is identified, these factors like safety and quality regulations, can be explored.
 
 # Tableau Packaged Workbook
 The tableau workbook which includes the group work and my personal Honors Option Work is included within the ELC Dropbox.
