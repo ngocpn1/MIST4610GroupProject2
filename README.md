@@ -106,13 +106,13 @@ In our second data visualization, the most noticible trend is that car crashes a
 A bar graph of the count of accidents within each category helps us to visualize that while the number of impaired driver accidents may seem high when looking at the overview map, they account for a relatively low number of accidents when compared to those of unimpaired drivers.
 
 <img width="1399" alt="Screenshot 2023-12-05 at 11 07 58 AM" src="https://github.com/anthonyramage/MIST4610GroupProject2/assets/141188901/8f889f0d-d2f0-4663-9e73-70e863033ef9">
-As stated previously, a more zoomed in observation of this data map allows for crash data visualization along specific roads. In this particular section of the map, it is clear to see that accidents are happening with the greatest frequency on what appears to be main roads, which concentrate around a particular center of activity. This visualization lends to a city center with a highway loop around the outside. Crashes are interspersed along side roads and throughout the loop, but this visualization allows for these "highways" to be indentified as areas of high accident rates. Further, it can be seen that impaired accidents occur along these high traffic roads and in the center of activity at a higher rate than they occur when crashes are recorded off of these clearly identificable "highways".
+As stated previously, a more zoomed in observation of this data map allows for crash data visualization along specific roads. In this particular section of the map, it is clear to see that accidents are happening with the greatest frequency on what appears to be main roads, which concentrate around a particular center of activity. This visualization lends to a city center with a highway loop around the outside. Crashes are interspersed along side roads and throughout the loop, but this visualization allows for these "highways" to be indentified as areas of high accident rates. Further, it can be seen that impaired accidents occur along these high traffic roads and in the center of activity at a higher rate than they occur when crashes are recorded off of these clearly identifiable "highways".
 
 
 
 
 # Tableau Packaged Workbook
-The tableau workbook which includes the group work and my personal Honors Option Work is included within the ELC Dropbox.
+The tableau workbook which includes the group work is included within the ELC Dropbox.
 
 
 
